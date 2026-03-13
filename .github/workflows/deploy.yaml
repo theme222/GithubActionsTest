@@ -12,7 +12,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-      - name: Helath Check
+      - name: Setup Node js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+        
+      - name: Install dependencies
+        run: npm isnt # Because this is technically valid
+        
+      - name: Run Build
+        run: npm run build
+        
+      - name: Health Check
         run: echo "Health Check Passed"
+        
+        
+        
+        
+        
 
         
